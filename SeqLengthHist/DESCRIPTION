@@ -1,4 +1,4 @@
-Package: FastaAnalysis
+Package: SeqLengthHist
 Version: 1.1
 Author: Matthew Bernstein
 Maintainer: Matthew Bernstein <matthewb@cs.wisc.edu>

@@ -1,0 +1,15 @@
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{Introduction to SeqLengthHist}
+
+## The RSkittleBrewer package
+
+The RSkittleBrewer package contains three functions: `RSkittleBrewer`,
+`plotSkittles`, and `plotSmarties`.
+
+The `RSkittleBrewer` function returns a vector of character strings
+corresponding to the colors for a given candy-related color palette.
+
+```{r RSkittleBrewer}
+library(SeqLengthHist)
+histSeqLengths("./sample.fa")
+```
