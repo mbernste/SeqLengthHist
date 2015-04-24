@@ -5,8 +5,13 @@
 #' @author Matthew Bernstein \email{matthewb@@c.wisc.edu}
 histSeqLengths <- 
 function(fastaFile) {
-    seq_lengths <- vector(mode="numeric", length=0)
     lines <- readLines(fastaFile)
+    createHist(lines)
+}
+
+createHist <-
+function(lines) {
+    seq_lengths <- vector(mode="numeric", length=0)
     seq <- ""
     for (line in lines)
     {
@@ -31,8 +36,7 @@ function(fastaFile) {
     # Process the last sequence
     seq_lengths <- c(seq_lengths, nchar(seq))
 
-    hist(seq_lengths, main="Histogram of Sequence Lengths", 
+    hist(seq_lengths, main="Histogram of Sequence Lengths",
          xlab="Sequence Length", col="blue",
          breaks=100)
 }
-
