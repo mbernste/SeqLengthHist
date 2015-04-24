@@ -2,6 +2,7 @@
 #' Creates a histogram of the sequence lengths from sequences in a FASTA file
 #'
 #' @param fastaFile filepath of target FASTA file
+#' @export
 #' @author Matthew Bernstein \email{matthewb@@c.wisc.edu}
 histSeqLengths <- 
 function(fastaFile) {

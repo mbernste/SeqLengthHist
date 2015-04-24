@@ -1,13 +1,12 @@
 %\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{Introduction to SeqLengthHist}
 
-## The RSkittleBrewer package
+## Introducton to SeqLengthHist
 
-The RSkittleBrewer package contains three functions: `RSkittleBrewer`,
-`plotSkittles`, and `plotSmarties`.
+The `SeqLengthHist` package contains one function: `histSeqLengths`.
 
-The `RSkittleBrewer` function returns a vector of character strings
-corresponding to the colors for a given candy-related color palette.
+The `histSeqLengths` plots a histogram of the sequence lengths in a
+FASTA file.  
 
 ```{r RSkittleBrewer}
 library(SeqLengthHist)
