@@ -1,0 +1,7 @@
+Package: FastaAnalysis
+Version: 1.1
+Author: Matthew Bernstein
+Maintainer: Matthew Bernstein <matthewb@cs.wisc.edu>
+Title: Analysis of Transcript Sequences
+License: None
+Description: Simple function for generating histogram of sequence lengths from sequences in a FASTA file
