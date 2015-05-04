@@ -3,14 +3,28 @@
 #'
 #' @param fastaFile filepath of target FASTA file
 #' @export
-#' @author Matthew Bernstein \email{matthewb@@c.wisc.edu}
+#' @author Matthew Bernstein \email{matthewb@@cs.wisc.edu}
 histSeqLengths <- 
 function(fastaFile) {
     lines <- readLines(fastaFile)
-    createHist(lines)
+    seq_lengths <- getSeqLengthsInFileContent(lines)
+    createHist(seq_lengths)
 }
 
-createHist <-
+
+#  getSeqLengths  
+#' Returns sequence lengths from sequences in a FASTA file
+#'
+#' @param fastaFile filepath of target FASTA file
+#' @export
+#' @author Matthew Bernstein \email{matthewb@@cs.wisc.edu}
+getSeqLengths <-
+function(fastaFile) {
+    lines <- readLines(fastaFile)
+    return(getSeqLengthsInFileContent(lines))
+}
+
+getSeqLengthsInFileContent <-
 function(lines) {
     seq_lengths <- vector(mode="numeric", length=0)
     seq <- ""
@@ -36,8 +50,13 @@ function(lines) {
     }
     # Process the last sequence
     seq_lengths <- c(seq_lengths, nchar(seq))
+    return(seq_lengths)
+}
 
-    hist(seq_lengths, main="Histogram of Sequence Lengths",
+createHist <-
+function(seq_lengths) {
+     hist(seq_lengths, main="Histogram of Sequence Lengths",
          xlab="Sequence Length", col="blue",
          breaks=100)
 }
+

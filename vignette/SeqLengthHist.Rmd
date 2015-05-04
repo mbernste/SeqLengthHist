@@ -3,7 +3,9 @@
 
 ## Introducton to SeqLengthHist
 
-The `SeqLengthHist` package contains one function: `histSeqLengths`.
+The `SeqLengthHist` package contains two function: `histSeqLengths` and `getSeqLengths`.
+
+The `getSeqLengths` returns a vector of all sequence lengths in the FASTA file 
 
 The `histSeqLengths` plots a histogram of the sequence lengths in a
 FASTA file.  
