@@ -5,3 +5,4 @@ Maintainer: Matthew Bernstein <matthewb@cs.wisc.edu>
 Title: Analysis of Transcript Sequences
 License: MIT + file LICENSE
 Description: Simple function for generating histogram of sequence lengths from sequences in a FASTA file
+Suggests: testthat
